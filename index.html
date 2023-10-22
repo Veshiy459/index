@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-scale=1.0">
+    <meta http-eqiv="X-UA-Compatible" content="ie-edge">
+    <title>Document</title>
+    <style>
+        input {
+            width: 90%;
+            outline: none;
+            margin: 10px 5%;
+            paddig: 15px 10px;
+            font-size: 14px;
+            border: 2px solid silver;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Подать заявку</h1>
+        <button id="start">Начать</button>
+    </div>
+    <form id="form">
+        <input type="text" placeholder="Имя Фамилия" id="user_name">
+        <input type="text" placeholder="Отделение" id="departament">
+        <input type="text" placeholder="Кабинет" id="office">
+        <input type="text" placeholder="Описание проблемы" id="problem">
+        <button id="order">Оформить</button>
+</form>
+<script src="https://Telegram.org/js/telegram-web-app.js"></script>
+<script>
+    let tg = window.Telegram.WebApp;
+    let buy = document.getElementById('Buy');
+    let order = document.getElementById('order');
+
+    start.addEvetnListener("Click", => {
+        document.getElementById("main").style.display="none";
+        document.getElementById("form").style.display="block";
+        document.getElementById("user_name").value = tg.InitDataUnsafe.user.first_name + " " + tg.InitDataUnsafe.user.last_name;
+    });
+    order.addEvetnListener("Click", => {
+    tg.close();
+    });
+
+</script>
+</body>
+
+
+
+</html>
